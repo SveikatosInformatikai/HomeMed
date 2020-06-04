@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FDFFFF"
+    android:orientation="vertical"
+    android:padding="50dp"
+
+    android:background="@android:color/holo_blue_light"
+    >
+
+    <!--Sukuriamas teksto atvaizdavimas, vartotojo duomenims  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slapyvardis" />
+
+    <EditText
+        android:id="@+id/etSlapyvardis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/slapyvardzio_ivedimas" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slaptažodis" />
+
+    <EditText
+        android:id="@+id/etSlaptazodis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/slaptazodzio_ivedimas"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/bPrisijungti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:text="Prisijungti" />
+
+    <TextView
+        android:id="@+id/tvRegLinkas"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:text="Naujas vartotojas? Registruokis čia!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#555B5C"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Info"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>
