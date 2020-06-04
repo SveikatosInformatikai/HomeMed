@@ -72,10 +72,10 @@ public class Login extends AppCompatActivity{
               if(task.isSuccessful()){
                   checkEmailVerification();
                   progressDialog.dismiss();
-                  Toast.makeText(Login.this, "Prisijungimas sėkmingas", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(Login.this, "Prisijungimas sėkmingas", Toast.LENGTH_LONG).show();
               }
               else{
-                  Toast.makeText(Login.this, "Prisijungti nepavyko, bandykite dar kartą", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(Login.this, "Prisijungti nepavyko, bandykite dar kartą", Toast.LENGTH_LONG).show();
                   counter--;
                   info.setText("Liko prisijungimo bandymų: " + String.valueOf(counter));
                   progressDialog.dismiss();
@@ -95,7 +95,7 @@ public class Login extends AppCompatActivity{
             finish();
             startActivity(new Intent(Login.this, UserProfile.class));
         }else{
-            Toast.makeText(this,"Elektroninis paštas turi būti patvirtintas", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Elektroninis paštas turi būti patvirtintas", Toast.LENGTH_LONG).show();
             firebaseAuth.signOut();
         }
     }
