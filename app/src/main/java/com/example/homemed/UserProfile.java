@@ -3,8 +3,10 @@ package com.example.homemed;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,16 +24,13 @@ public class UserProfile extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        logout = (ImageButton)findViewById(R.id.iseitiButton);
+        logout = (ImageButton) findViewById(R.id.iseitiButton);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                firebaseAuth.signOut();
-                finish();
-                startActivity(new Intent(UserProfile.this, Login.class));
+                startActivity(new Intent(UserProfile.this, MeniuActivity.class));
             }
         });
-
     }
 }

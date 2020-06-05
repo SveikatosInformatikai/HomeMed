@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Login extends AppCompatActivity{
 
     Button bPrisijungimas;
+    Button bPrisijungti;
     EditText etSlapyvardis, etSlaptazodis;
     TextView info;
     TextView registrLink;
@@ -46,7 +47,7 @@ public class Login extends AppCompatActivity{
 
         if(user != null){
             finish();
-            startActivity(new Intent(Login.this, UserProfile.class));
+            startActivity(new Intent(Login.this, MeniuActivity.class));
         }
 
         bPrisijungimas.setOnClickListener(new View.OnClickListener() {
@@ -70,12 +71,13 @@ public class Login extends AppCompatActivity{
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
               if(task.isSuccessful()){
-                  checkEmailVerification();
+                  //checkEmailVerification();
                   progressDialog.dismiss();
-                  Toast.makeText(Login.this, "Prisijungimas sėkmingas", Toast.LENGTH_LONG).show();
+                  Toast.makeText(Login.this, "Prisijungimas sėkmingas", Toast.LENGTH_SHORT).show();
+                  startActivity(new Intent(Login.this, MeniuActivity.class));
               }
               else{
-                  Toast.makeText(Login.this, "Prisijungti nepavyko, bandykite dar kartą", Toast.LENGTH_LONG).show();
+                  Toast.makeText(Login.this, "Prisijungti nepavyko, bandykite dar kartą", Toast.LENGTH_SHORT).show();
                   counter--;
                   info.setText("Liko prisijungimo bandymų: " + String.valueOf(counter));
                   progressDialog.dismiss();
@@ -98,5 +100,21 @@ public class Login extends AppCompatActivity{
             Toast.makeText(this,"Elektroninis paštas turi būti patvirtintas", Toast.LENGTH_LONG).show();
             firebaseAuth.signOut();
         }
+        bPrisijungti = (Button) findViewById(R.id.bPrisijungti);
+
+
+        bPrisijungti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View bPrisijungti) {
+                openActivity_ligos_radimas();
+
+            }
+        });
+
+
+    }
+    public void openActivity_ligos_radimas() {
+        Intent intent = new Intent(this, MeniuActivity.class);
+        startActivity(intent);
     }
 }

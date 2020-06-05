@@ -6,25 +6,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class activity_ar_yra_simptomu extends AppCompatActivity {
 
-    private Button buttonYra;
+    private Button Yra;
     private Button buttonNe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ar_yra_simptomu);
-        buttonYra = (Button) findViewById(R.id.Button_yra);
+        Yra = (Button) findViewById(R.id.B_yra);
         buttonNe = (Button) findViewById(R.id.Button_nera);
-        buttonYra.setOnClickListener(new View.OnClickListener() {
+        
+        Yra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivityYra();
-
+                Intent intent = new Intent(activity_ar_yra_simptomu.this, Simptomu_ivedimas.class);
+                startActivity(intent);
             }
-
-
         });
         buttonNe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,14 +34,9 @@ public class activity_ar_yra_simptomu extends AppCompatActivity {
         });
 
     }
-    public void openActivityYra(){
-        Intent intent = new Intent(this, Simptomu_ivedimas.class);
-        startActivity(intent);
-    }
-
     public void openActivityNera(){
-        Intent intent = new Intent(this, Atsiprasymo_langas_kai_simptomu_nera.class);
-        startActivity(intent);
-
+            Toast.makeText(activity_ar_yra_simptomu.this, "Atsiprašome, bet ligos nustatyti nepavyks", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MeniuActivity.class);
+            startActivity(intent);
     }
 }

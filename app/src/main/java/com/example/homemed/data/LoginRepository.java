@@ -1,6 +1,6 @@
 package com.example.homemed.data;
 
-import com.example.homemed.data.model.LoggedInUser;
+import com.example.homemed.data.LoggedInUser;
 
 /**
  * Class that requests authentication and user information from the remote data source and

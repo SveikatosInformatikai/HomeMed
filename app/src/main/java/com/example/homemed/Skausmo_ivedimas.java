@@ -19,16 +19,9 @@ public class Skausmo_ivedimas extends AppCompatActivity {
         ivesti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivityIvesti();
+                startActivity(new Intent(Skausmo_ivedimas.this, Duomenu_isvedimasActivity.class));
 
             }
         });
-
-
     }
-    public void openActivityIvesti(){
-        Intent intent = new Intent(this, Skausmo_ivedimas.class);
-        startActivity(intent);
-    }
-
 }

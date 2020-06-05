@@ -61,10 +61,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()) {
-                                Toast.makeText(Register.this, "Registracija sėkminga", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(Register.this, MainActivity.class));
+                                Toast.makeText(Register.this, "Registracija sėkminga, prašome prisijungti", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(Register.this, Login.class));
                             }else{
-                                Toast.makeText(Register.this, "Registracija nepavyko", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Register.this, "Registracija nesėkminga, bandykite dar kartą", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

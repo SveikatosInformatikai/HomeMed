@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,7 +11,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="150dp"
         android:background="#78E7F8"
         android:padding="20dp">
 
@@ -59,16 +60,6 @@
             android:background="#78E7F8"
             app:srcCompat="@drawable/logoutmini" />
 
-        <ImageButton
-            android:id="@+id/checkupButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="270dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="2dp"
-            android:background="#78E7F8"
-            app:srcCompat="@drawable/clinic" />
-
 
     </RelativeLayout>
 
@@ -113,23 +104,13 @@
             android:layout_width="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="361dp"
+                android:layout_height="88dp"
                 android:drawableLeft="@drawable/lock"
                 android:drawablePadding="10dp"
                 android:text="password" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/infoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="5dp"
-        android:background="#FFFF"
-        app:srcCompat="@drawable/info" />
 
 
 </LinearLayout>

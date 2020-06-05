@@ -1,6 +1,7 @@
 package com.example.homemed.data;
 
-import com.example.homemed.data.model.LoggedInUser;
+import com.example.homemed.data.LoggedInUser;
+
 
 import java.io.IOException;
 
